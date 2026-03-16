@@ -74,3 +74,57 @@
   background-color: var(--color-secundario);
   color: white !important;
 }
+
+
+/* Ocultar el botón hamburguesa en pantallas grandes */
+.menu-toggle {
+  display: none;
+  background: transparent;
+  color: white;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* =========================================
+   DISEÑO PARA CELULARES (Responsive)
+   ========================================= */
+@media (max-width: 900px) {
+
+  .menu-toggle {
+    display: block; /* Mostrar el botón de 3 rayas */
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%; /* Se posiciona justo debajo de la barra */
+    left: 0;
+    width: 100%;
+    background-color: rgba(44, 54, 22, 0.95); /* El verde oscuro de tu footer */
+    flex-direction: column; /* Pone los enlaces hacia abajo */
+    padding: 20px 0;
+    gap: 25px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+
+    /* Efecto de ocultar subiendo el menú */
+    transform: translateY(-150%);
+    opacity: 0;
+    transition: all 0.4s ease;
+    z-index: -1;
+    pointer-events: none; /* Para que no se pueda clickear si está oculto */
+  }
+
+  /* Cuando haces clic y Angular agrega la clase .active */
+  .nav-links.active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* Ajuste para que el botón de contacto se vea bien en celular */
+  .nav-btn {
+    border-color: white;
+    display: inline-block;
+  }
+}

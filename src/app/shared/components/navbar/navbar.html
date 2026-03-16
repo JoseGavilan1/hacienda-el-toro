@@ -1,16 +1,20 @@
 <nav class="navbar-toro">
   <div class="nav-container">
-    <a routerLink="/" class="logo">
+    <a routerLink="/" class="logo" (click)="closeMenu()">
       <span class="logo-hacienda">Hacienda El Toro</span>
       <span class="logo-sub">Centro de Eventos</span>
     </a>
 
-    <ul class="nav-links">
-      <li><a routerLink="/">Inicio</a></li>
-      <li><a routerLink="/servicios">Servicios</a></li>
-      <li><a routerLink="/instalaciones">Instalaciones</a></li>
-      <li><a routerLink="/galeria">Galería</a></li>
-      <li><a routerLink="/contacto" class="nav-btn">Contacto</a></li>
+    <button class="menu-toggle" (click)="toggleMenu()">
+      ☰
+    </button>
+
+    <ul class="nav-links" [class.active]="isMenuOpen">
+      <li><a routerLink="/" (click)="closeMenu()">Inicio</a></li>
+      <li><a routerLink="/servicios" (click)="closeMenu()">Servicios</a></li>
+      <li><a routerLink="/instalaciones" (click)="closeMenu()">Instalaciones</a></li>
+      <li><a routerLink="/galeria" (click)="closeMenu()">Galería</a></li>
+      <li><a routerLink="/contacto" class="nav-btn" (click)="closeMenu()">Contacto</a></li>
     </ul>
   </div>
 </nav>
