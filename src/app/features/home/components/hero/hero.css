@@ -1,0 +1,89 @@
+.hero-eventos {
+  height: 100vh; /* Pantalla completa para máximo impacto */
+  width: 100%;
+  position: relative;
+
+  /* Imagen temporal de un matrimonio elegante al aire libre */
+  background-image: url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=2000&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 800px;
+  padding: 0 20px;
+  color: white;
+}
+
+.subtitle {
+  color: var(--color-secundario);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.hero-content h1 {
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  color: white;
+  margin: 0 0 20px 0;
+  letter-spacing: 2px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  color: #f0f0f0;
+  font-weight: 300;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.btn-gold, .btn-outline-white {
+  padding: 15px 40px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.btn-gold {
+  background-color: var(--color-secundario);
+  color: white;
+  border: none;
+}
+
+.btn-gold:hover {
+  background-color: #bfa133;
+  transform: translateY(-3px);
+}
+
+.btn-outline-white {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+}
+
+.btn-outline-white:hover {
+  background-color: white;
+  color: var(--color-texto);
+}

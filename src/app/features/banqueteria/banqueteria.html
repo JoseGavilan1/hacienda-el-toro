@@ -1,0 +1,31 @@
+<div class="page-wrapper">
+  <header class="page-header">
+    <div class="header-content">
+      <h1>Banquetería</h1>
+      <div class="divider"></div>
+    </div>
+  </header>
+
+  <div class="content-container">
+
+    <div class="text-section">
+      <span class="subtitle">Sabores a tu medida</span>
+      <h2>Una experiencia culinaria inolvidable</h2>
+      <p>
+        Hacienda El Toro cuenta con diferentes tipos de menú para todos los gustos.
+        Sin embargo, damos la posibilidad de construir junto a usted y nuestros expertos
+        el menú ideal, que se ajuste a todos sus requerimientos.
+      </p>
+      <button class="btn-gold">Cotizar Menú</button>
+    </div>
+
+    <div class="gallery-section">
+      <div class="gallery-grid">
+        <div class="gallery-item" *ngFor="let img of imagenes">
+          <img [src]="img" alt="Plato Banquetería Hacienda El Toro">
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --color-primario: #4A5D23; /* Verde Oliva Elegante */
+  --color-secundario: #D4AF37; /* Dorado Champagne */
+  --color-fondo: #FAFAFA; /* Blanco muy suave */
+  --color-texto: #333333;
+  --fuente-titulo: 'Playfair Display', 'Georgia', serif; /* Fuente elegante */
+  --fuente-cuerpo: 'Lato', 'Arial', sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: var(--fuente-cuerpo);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-family: var(--fuente-titulo);
+  color: var(--color-primario);
+  font-weight: normal; /* Los títulos elegantes suelen ser más finos */
+}

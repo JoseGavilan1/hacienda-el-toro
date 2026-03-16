@@ -1,0 +1,46 @@
+<div class="page-wrapper">
+
+  <header class="page-header">
+    <div class="header-content">
+      <h1>Nuestras Instalaciones</h1>
+      <div class="divider"></div>
+      <p class="header-subtitle">Descubra los espacios que darán vida a su evento</p>
+    </div>
+  </header>
+
+  <div class="infra-container">
+    <div class="infra-item" *ngFor="let item of instalaciones; let i = index" [ngClass]="{'reverse': i % 2 !== 0}">
+
+      <div class="infra-img">
+        <img [src]="item.imagen" [alt]="item.nombre">
+      </div>
+
+      <div class="infra-text">
+        <h2>{{ item.nombre }}</h2>
+        <div class="small-divider"></div>
+        <p>{{ item.descripcion }}</p>
+
+        <button class="btn-outline" (click)="openGallery(item.galeria)">Ver Galería</button>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="modal-overlay" *ngIf="isModalOpen" (click)="closeGallery()">
+
+    <div class="modal-content" (click)="$event.stopPropagation()">
+
+      <button class="btn-close" (click)="closeGallery()">×</button>
+      <button class="btn-prev" (click)="prevImage()">&#10094;</button>
+
+      <div class="modal-image-container">
+        <img [src]="currentGallery[currentImageIndex]" alt="Galería Hacienda El Toro">
+        <div class="image-counter">{{ currentImageIndex + 1 }} / {{ currentGallery.length }}</div>
+      </div>
+
+      <button class="btn-next" (click)="nextImage()">&#10095;</button>
+    </div>
+
+  </div>
+
+</div>

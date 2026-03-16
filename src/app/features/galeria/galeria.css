@@ -1,0 +1,133 @@
+.page-wrapper {
+  background-color: var(--color-fondo);
+  min-height: 100vh;
+  padding-bottom: 80px;
+}
+
+/* Cabecera */
+.page-header {
+  height: 35vh;
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=2000');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.header-content h1 {
+  color: white;
+  font-size: 3.5rem;
+  margin-bottom: 15px;
+}
+
+.header-subtitle {
+  color: #e0e0e0;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.divider {
+  width: 80px;
+  height: 2px;
+  background-color: var(--color-secundario);
+  margin: 0 auto;
+}
+
+/* MAGIA MASONRY (Pinterest Style) */
+.galeria-masonry {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  /* Divide en columnas */
+  column-count: 3;
+  column-gap: 20px;
+}
+
+.galeria-item {
+  position: relative;
+  break-inside: avoid; /* Evita que una foto se corte a la mitad entre columnas */
+  margin-bottom: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.galeria-item img {
+  width: 100%;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+/* Efecto al pasar el mouse por encima de la miniatura */
+.img-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(74, 93, 35, 0.7); /* Verde de la marca semitransparente */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+}
+
+.img-overlay span {
+  color: white;
+  font-family: var(--fuente-titulo);
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  border: 1px solid white;
+  padding: 10px 20px;
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+}
+
+.galeria-item:hover .img-overlay {
+  opacity: 1;
+}
+
+.galeria-item:hover .img-overlay span {
+  transform: translateY(0);
+}
+
+.galeria-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Responsivo para celulares y tablets */
+@media (max-width: 1024px) {
+  .galeria-masonry { column-count: 2; }
+}
+
+@media (max-width: 600px) {
+  .galeria-masonry { column-count: 1; }
+}
+
+/* =========================================
+   ESTILOS DEL MODAL (Copia exacta de instalaciones)
+   ========================================= */
+.modal-overlay {
+  position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9); z-index: 10000;
+  display: flex; justify-content: center; align-items: center;
+  backdrop-filter: blur(8px);
+}
+.modal-content { position: relative; max-width: 90%; max-height: 90vh; display: flex; align-items: center; }
+.modal-image-container { position: relative; }
+.modal-image-container img { max-height: 85vh; max-width: 100%; object-fit: contain; border-radius: 4px; box-shadow: 0 10px 40px rgba(0,0,0,0.8); }
+.image-counter { position: absolute; bottom: -40px; left: 50%; transform: translateX(-50%); color: #aaa; font-size: 1rem; letter-spacing: 3px; }
+.btn-close { position: absolute; top: -50px; right: -50px; background: transparent; color: white; border: none; font-size: 3rem; cursor: pointer; transition: color 0.3s ease; padding: 0; line-height: 1; }
+.btn-close:hover { color: var(--color-secundario); }
+.btn-prev, .btn-next { background: rgba(255, 255, 255, 0.1); color: white; border: none; font-size: 2rem; padding: 15px 20px; cursor: pointer; position: absolute; top: 50%; transform: translateY(-50%); border-radius: 5px; transition: all 0.3s ease; }
+.btn-prev:hover, .btn-next:hover { background: var(--color-secundario); }
+.btn-prev { left: -80px; }
+.btn-next { right: -80px; }
+@media (max-width: 900px) {
+  .btn-prev { left: 10px; background: rgba(0,0,0,0.5); }
+  .btn-next { right: 10px; background: rgba(0,0,0,0.5); }
+  .btn-close { top: -50px; right: 0; }
+  .modal-image-container img { max-height: 70vh; }
+}

@@ -1,0 +1,24 @@
+<section class="servicios-section" id="servicios">
+  <div class="container">
+    <div class="section-header">
+      <span class="subtitle">Todo lo que necesitas</span>
+      <h2>Nuestros Servicios</h2>
+      <div class="divider"></div>
+      <p class="section-desc">En Hacienda El Toro nos encargamos de cada detalle para que tu única preocupación sea disfrutar de tu gran día.</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card" *ngFor="let servicio of servicios">
+
+        <div class="img-wrapper">
+          <img [src]="servicio.imagen" [alt]="servicio.titulo">
+        </div>
+
+        <h3>{{ servicio.titulo }}</h3>
+        <p>{{ servicio.descripcion }}</p>
+
+        <button class="btn-more" [routerLink]="servicio.ruta">Saber más</button>
+      </div>
+    </div>
+  </div>
+</section>
