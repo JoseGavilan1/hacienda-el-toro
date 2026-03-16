@@ -1,0 +1,133 @@
+.footer-toro {
+  /* Un verde aún más oscuro que el primario para dar contraste y elegancia */
+  background-color: #2c3616;
+  color: #e0e0e0;
+  padding: 70px 0 0 0;
+  font-family: var(--fuente-cuerpo);
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr; /* La primera columna (marca) es más ancha */
+  gap: 50px;
+  margin-bottom: 50px;
+}
+
+/* Marca */
+.footer-brand h3 {
+  font-family: var(--fuente-titulo);
+  font-size: 2.2rem;
+  color: var(--color-secundario); /* Dorado */
+  margin: 0 0 15px 0;
+  letter-spacing: 1px;
+}
+
+.footer-brand p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  max-width: 400px;
+}
+
+/* Redes Sociales */
+.social-links a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--color-secundario);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 38px;
+  color: var(--color-secundario);
+  text-decoration: none;
+  margin-right: 15px;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.social-links a:hover {
+  background-color: var(--color-secundario);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+}
+
+/* Títulos de las columnas */
+.footer-links h4,
+.footer-contact h4 {
+  color: white;
+  font-size: 1.2rem;
+  margin-top: 0;
+  margin-bottom: 25px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Enlaces Rápidos */
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  color: #e0e0e0;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.footer-links a:hover {
+  color: var(--color-secundario);
+  transform: translateX(5px); /* Pequeño movimiento a la derecha al hacer hover */
+}
+
+/* Contacto */
+.footer-contact p {
+  margin: 0 0 12px 0;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Barra inferior (Copyright) */
+.footer-bottom {
+  background-color: #1a200d; /* Verde casi negro total */
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #aaa;
+  letter-spacing: 1px;
+}
+
+/* Responsivo para celulares */
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: 1fr; /* Todo en una sola columna */
+    gap: 40px;
+    text-align: center;
+  }
+  .footer-brand p {
+    margin: 0 auto 25px auto;
+  }
+  .footer-links a:hover {
+    transform: none; /* Quitamos el movimiento en celular */
+  }
+  .footer-contact p {
+    justify-content: center;
+  }
+}

@@ -5,7 +5,7 @@ import { ServicesComponent } from './components/services/services';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [Hero, ServicesComponent], // <-- Agrega esto
+  imports: [Hero], // <-- Agrega esto
   templateUrl: './home.html',
   styleUrl: './home.css'
 })
