@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterLink } from '@angular/router'; // Importante para los enlaces
+import { RouterLink } from '@angular/router'; 
 
 @Component({
   selector: 'app-footer',
@@ -10,6 +10,5 @@ import { RouterLink } from '@angular/router'; // Importante para los enlaces
   styleUrl: './footer.css'
 })
 export class FooterComponent {
-  // Obtenemos el año actual automáticamente para el Copyright
   anioActual = new Date().getFullYear();
 }

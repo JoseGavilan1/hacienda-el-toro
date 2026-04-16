@@ -86,43 +86,38 @@
   cursor: pointer;
 }
 
-/* =========================================
-   DISEÑO PARA CELULARES (Responsive)
-   ========================================= */
 @media (max-width: 900px) {
 
   .menu-toggle {
-    display: block; /* Mostrar el botón de 3 rayas */
+    display: block;
   }
 
   .nav-links {
     position: absolute;
-    top: 100%; /* Se posiciona justo debajo de la barra */
+    top: 100%;
     left: 0;
     width: 100%;
-    background-color: rgba(44, 54, 22, 0.95); /* El verde oscuro de tu footer */
-    flex-direction: column; /* Pone los enlaces hacia abajo */
+    background-color: rgba(44, 54, 22, 0.95);
+    flex-direction: column;
     padding: 20px 0;
     gap: 25px;
     text-align: center;
     backdrop-filter: blur(10px);
 
-    /* Efecto de ocultar subiendo el menú */
     transform: translateY(-150%);
     opacity: 0;
     transition: all 0.4s ease;
     z-index: -1;
-    pointer-events: none; /* Para que no se pueda clickear si está oculto */
+    pointer-events: none;
   }
 
-  /* Cuando haces clic y Angular agrega la clase .active */
+
   .nav-links.active {
     transform: translateY(0);
     opacity: 1;
     pointer-events: auto;
   }
 
-  /* Ajuste para que el botón de contacto se vea bien en celular */
   .nav-btn {
     border-color: white;
     display: inline-block;

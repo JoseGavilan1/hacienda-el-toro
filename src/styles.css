@@ -1,9 +1,9 @@
 :root {
-  --color-primario: #4A5D23; /* Verde Oliva Elegante */
-  --color-secundario: #D4AF37; /* Dorado Champagne */
-  --color-fondo: #FAFAFA; /* Blanco muy suave */
+  --color-primario: #4A5D23; 
+  --color-secundario: #D4AF37;
+  --color-fondo: #FAFAFA;
   --color-texto: #333333;
-  --fuente-titulo: 'Playfair Display', 'Georgia', serif; /* Fuente elegante */
+  --fuente-titulo: 'Playfair Display', 'Georgia', serif;
   --fuente-cuerpo: 'Lato', 'Arial', sans-serif;
 }
 
@@ -18,5 +18,5 @@ body {
 h1, h2, h3 {
   font-family: var(--fuente-titulo);
   color: var(--color-primario);
-  font-weight: normal; /* Los títulos elegantes suelen ser más finos */
+  font-weight: normal;
 }

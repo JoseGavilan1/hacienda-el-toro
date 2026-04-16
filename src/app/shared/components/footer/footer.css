@@ -114,7 +114,6 @@
   letter-spacing: 1px;
 }
 
-/* Responsivo para celulares */
 @media (max-width: 900px) {
   .footer-container {
     grid-template-columns: 1fr; /* Todo en una sola columna */
@@ -125,7 +124,7 @@
     margin: 0 auto 25px auto;
   }
   .footer-links a:hover {
-    transform: none; /* Quitamos el movimiento en celular */
+    transform: none; 
   }
   .footer-contact p {
     justify-content: center;

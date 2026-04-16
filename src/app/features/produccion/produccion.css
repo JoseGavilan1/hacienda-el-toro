@@ -4,7 +4,6 @@
   padding-bottom: 100px;
 }
 
-/* Cabecera con imagen de fiesta/luces de fondo */
 .page-header {
   height: 40vh;
   background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=2000');
@@ -31,7 +30,6 @@
   margin: 0 auto;
 }
 
-/* Contenedor Dividido */
 .content-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -42,7 +40,6 @@
   align-items: center;
 }
 
-/* Sección de Texto */
 .subtitle {
   color: var(--color-secundario);
   text-transform: uppercase;
@@ -84,7 +81,6 @@
   background-color: #bfa133;
 }
 
-/* Galería Grid */
 .gallery-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -109,7 +105,6 @@
   transform: scale(1.08);
 }
 
-/* Responsivo para móviles */
 @media (max-width: 900px) {
   .content-container {
     grid-template-columns: 1fr;

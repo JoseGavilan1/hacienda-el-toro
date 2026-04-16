@@ -4,7 +4,6 @@
   padding-bottom: 80px;
 }
 
-/* Cabecera */
 .page-header {
   height: 35vh;
   background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2000');
@@ -36,7 +35,6 @@
   margin: 0 auto;
 }
 
-/* Contenedor dividido en 2 columnas */
 .contact-container {
   max-width: 1100px;
   margin: 0 auto;
@@ -46,7 +44,6 @@
   gap: 60px;
 }
 
-/* --- Lado Izquierdo (Info y Mapa) --- */
 .contact-info h2 {
   font-size: 2.2rem;
   color: var(--color-primario);
@@ -83,11 +80,9 @@
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-  /* Un pequeño filtro para que el mapa no desentone tanto con los colores elegantes */
   filter: contrast(0.9) grayscale(0.2);
 }
 
-/* --- Lado Derecho (Formulario Elegante) --- */
 .contact-form-container {
   background-color: white;
   padding: 40px;
@@ -110,7 +105,6 @@
   letter-spacing: 1px;
 }
 
-/* Diseño minimalista de inputs (solo línea inferior) */
 .elegant-form input,
 .elegant-form select,
 .elegant-form textarea {
@@ -155,7 +149,6 @@
   background-color: #bfa133;
 }
 
-/* Responsivo */
 @media (max-width: 900px) {
   .contact-container {
     grid-template-columns: 1fr;

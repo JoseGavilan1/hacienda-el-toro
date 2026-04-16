@@ -4,7 +4,6 @@
   padding-bottom: 80px;
 }
 
-/* Cabecera */
 .page-header {
   height: 35vh;
   background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=2000');
@@ -36,7 +35,6 @@
   margin: 0 auto;
 }
 
-/* MAGIA MASONRY (Pinterest Style) */
 .galeria-masonry {
   max-width: 1400px;
   margin: 0 auto;
@@ -48,7 +46,7 @@
 
 .galeria-item {
   position: relative;
-  break-inside: avoid; /* Evita que una foto se corte a la mitad entre columnas */
+  break-inside: avoid;
   margin-bottom: 20px;
   border-radius: 8px;
   overflow: hidden;
@@ -61,11 +59,10 @@
   transition: transform 0.4s ease;
 }
 
-/* Efecto al pasar el mouse por encima de la miniatura */
 .img-overlay {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(74, 93, 35, 0.7); /* Verde de la marca semitransparente */
+  background: rgba(74, 93, 35, 0.7);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -97,7 +94,6 @@
   transform: scale(1.05);
 }
 
-/* Responsivo para celulares y tablets */
 @media (max-width: 1024px) {
   .galeria-masonry { column-count: 2; }
 }
@@ -106,9 +102,6 @@
   .galeria-masonry { column-count: 1; }
 }
 
-/* =========================================
-   ESTILOS DEL MODAL (Copia exacta de instalaciones)
-   ========================================= */
 .modal-overlay {
   position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
   background-color: rgba(0, 0, 0, 0.9); z-index: 10000;

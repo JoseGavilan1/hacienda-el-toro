@@ -10,23 +10,21 @@ import { CommonModule } from '@angular/common';
 })
 export class GaleriaComponent {
 
-  // Fotos variadas (Matrimonios, comida, fiesta, entorno campestre)
   imagenes = [
-    'https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=1200', // Novios / Exterior
-    'https://images.unsplash.com/photo-1555244162-803834f70033?q=80&w=1200', // Banquetería
-    'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=1200', // Fiesta / Luces
-    'https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=1200', // Decoración rústica
-    'https://images.unsplash.com/photo-1532712938310-34cb3982ef74?q=80&w=1200', // Brindis
-    'https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200', // Novia vertical
-    'https://images.unsplash.com/photo-1508344928928-7165b67de128?q=80&w=1200', // Áreas verdes
-    'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=1200', // Recepción
-    'https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?q=80&w=1200'  // Argollas/Detalles
+    'https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=1200',
+    'https://images.unsplash.com/photo-1555244162-803834f70033?q=80&w=1200',
+    'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=1200',
+    'https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=1200',
+    'https://images.unsplash.com/photo-1532712938310-34cb3982ef74?q=80&w=1200',
+    'https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200',
+    'https://images.unsplash.com/photo-1508344928928-7165b67de128?q=80&w=1200',
+    'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=1200',
+    'https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?q=80&w=1200'
   ];
 
   isModalOpen = false;
   currentImageIndex = 0;
 
-  // Al hacer clic en una foto, abrimos el modal en esa posición exacta
   openGallery(index: number) {
     this.currentImageIndex = index;
     this.isModalOpen = true;

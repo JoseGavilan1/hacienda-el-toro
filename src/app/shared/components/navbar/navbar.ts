@@ -14,7 +14,6 @@ isMenuOpen = false;
     this.isMenuOpen = !this.isMenuOpen;
   }
 
-  // Esto es para que el menú se cierre automáticamente cuando pinchas un enlace
   closeMenu() {
     this.isMenuOpen = false;
   }

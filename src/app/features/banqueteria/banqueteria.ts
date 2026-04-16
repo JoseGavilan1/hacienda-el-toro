@@ -9,7 +9,6 @@ import { CommonModule } from '@angular/common';
   styleUrl: './banqueteria.css'
 })
 export class BanqueteriaComponent {
-  // Imágenes de alta calidad de comida/banquetes para reemplazar las circulares
   imagenes = [
     'https://images.unsplash.com/photo-1555244162-803834f70033?q=80&w=800',
     'https://images.unsplash.com/photo-1655196753068-154b2a8ed291?q=80&w=800',

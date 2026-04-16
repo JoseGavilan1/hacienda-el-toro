@@ -4,7 +4,6 @@
   padding-bottom: 80px;
 }
 
-/* Cabecera elegante */
 .page-header {
   height: 45vh;
   background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=2000');
@@ -38,14 +37,12 @@
   margin: 0 auto;
 }
 
-/* Contenedor Principal */
 .infra-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-/* Layout Zig-Zag */
 .infra-item {
   display: flex;
   align-items: center;
@@ -53,14 +50,12 @@
   margin-bottom: 100px;
 }
 
-/* CLAVE: Si tiene la clase 'reverse', invierte el orden (texto izq, foto der) */
 .infra-item.reverse {
   flex-direction: row-reverse;
 }
 
-/* Imagen */
 .infra-img {
-  flex: 1; /* Ocupa la mitad del espacio */
+  flex: 1;
   height: 400px;
   border-radius: 4px;
   overflow: hidden;
@@ -75,12 +70,11 @@
 }
 
 .infra-item:hover .infra-img img {
-  transform: scale(1.05); /* Zoom sutil al pasar el mouse por toda la fila */
+  transform: scale(1.05);
 }
 
-/* Texto */
 .infra-text {
-  flex: 1; /* Ocupa la otra mitad */
+  flex: 1;
   padding: 20px;
 }
 
@@ -122,7 +116,6 @@
   color: white;
 }
 
-/* Responsivo para celulares (Rompe el zig-zag y pone todo en columna) */
 @media (max-width: 900px) {
   .infra-item, .infra-item.reverse {
     flex-direction: column;
@@ -142,9 +135,6 @@
   }
 }
 
-/* =========================================
-   ESTILOS DEL MODAL (POP-UP LIGHTBOX)
-   ========================================= */
 
 .modal-overlay {
   position: fixed;
@@ -152,12 +142,12 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.9); /* Fondo casi negro */
-  z-index: 10000; /* Por encima del navbar */
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 10000;
   display: flex;
   justify-content: center;
   align-items: center;
-  backdrop-filter: blur(8px); /* Efecto difuminado moderno */
+  backdrop-filter: blur(8px);
 }
 
 .modal-content {
@@ -175,7 +165,7 @@
 .modal-image-container img {
   max-height: 85vh;
   max-width: 100%;
-  object-fit: contain; /* Para que la foto no se deforme ni se recorte */
+  object-fit: contain;
   border-radius: 4px;
   box-shadow: 0 10px 40px rgba(0,0,0,0.8);
 }
@@ -190,7 +180,6 @@
   letter-spacing: 3px;
 }
 
-/* Botones de control del Pop-up */
 .btn-close {
   position: absolute;
   top: -50px;
@@ -227,11 +216,9 @@
   background: var(--color-secundario);
 }
 
-/* Posición de las flechas */
 .btn-prev { left: -80px; }
 .btn-next { right: -80px; }
 
-/* Ajustes para celulares */
 @media (max-width: 900px) {
   .btn-prev { left: 10px; background: rgba(0,0,0,0.5); }
   .btn-next { right: 10px; background: rgba(0,0,0,0.5); }

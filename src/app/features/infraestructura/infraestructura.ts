@@ -10,7 +10,6 @@ import { CommonModule } from '@angular/common';
 })
 export class InfraestructuraComponent {
 
-  // Variables para controlar el Pop-up (Lightbox)
   isModalOpen = false;
   currentGallery: string[] = [];
   currentImageIndex = 0;
@@ -20,7 +19,7 @@ export class InfraestructuraComponent {
       nombre: 'Casona El Toro',
       descripcion: 'Nuestra casona principal cuenta con una arquitectura rústica tradicional, amplios salones, vigas a la vista y todas las comodidades para recibir a sus invitados en un ambiente cálido y elegante.',
       imagen: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=1000',
-      // Agregamos un arreglo de fotos para la galería de esta sección
+
       galeria: [
         'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=1200',
         'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=1200',
@@ -58,24 +57,23 @@ export class InfraestructuraComponent {
     }
   ];
 
-  // Funciones del Modal
   openGallery(galeria: string[]) {
     this.currentGallery = galeria;
     this.currentImageIndex = 0;
     this.isModalOpen = true;
-    document.body.style.overflow = 'hidden'; // Evita que se pueda hacer scroll de fondo
+    document.body.style.overflow = 'hidden';
   }
 
   closeGallery() {
     this.isModalOpen = false;
-    document.body.style.overflow = 'auto'; // Devuelve el scroll
+    document.body.style.overflow = 'auto';
   }
 
   nextImage() {
     if (this.currentImageIndex < this.currentGallery.length - 1) {
       this.currentImageIndex++;
     } else {
-      this.currentImageIndex = 0; // Si llega al final, vuelve a la primera
+      this.currentImageIndex = 0;
     }
   }
 
@@ -83,12 +81,10 @@ export class InfraestructuraComponent {
     if (this.currentImageIndex > 0) {
       this.currentImageIndex--;
     } else {
-      this.currentImageIndex = this.currentGallery.length - 1; // Si está en la primera, va a la última
+      this.currentImageIndex = this.currentGallery.length - 1;
     }
   }
 
-  // Bonus Pro: Cerrar con la tecla Escape
-  // Bonus Pro: Cerrar con la tecla Escape
   @HostListener('document:keydown.escape')
   onKeydownHandler() {
     if (this.isModalOpen) {

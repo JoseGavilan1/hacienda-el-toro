@@ -8,7 +8,6 @@
   margin: 0 auto;
 }
 
-/* Cabecera de la sección */
 .section-header {
   text-align: center;
   margin-bottom: 70px;
@@ -45,7 +44,6 @@
   font-size: 1.1rem;
 }
 
-/* Grilla de Servicios */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -62,15 +60,14 @@
   transform: translateY(-10px);
 }
 
-/* Imágenes circulares modernas */
 .img-wrapper {
   width: 220px;
   height: 220px;
   margin: 0 auto 30px;
-  border-radius: 50%; /* Hace la imagen circular */
+  border-radius: 50%;
   overflow: hidden;
   box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-  border: 5px solid white; /* Un borde blanco sutil que le da elegancia */
+  border: 5px solid white;
 }
 
 .img-wrapper img {
@@ -81,7 +78,7 @@
 }
 
 .service-card:hover .img-wrapper img {
-  transform: scale(1.1); /* Efecto zoom muy elegante al pasar el mouse */
+  transform: scale(1.1);
 }
 
 .service-card h3 {
@@ -97,7 +94,6 @@
   font-size: 0.95rem;
 }
 
-/* Botón moderno (Reemplazo del verde feo de Wix) */
 .btn-more {
   background: transparent;
   color: var(--color-secundario);
@@ -106,7 +102,7 @@
   font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 2px;
-  border-radius: 30px; /* Bordes redondeados pero finos */
+  border-radius: 30px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -114,5 +110,5 @@
 .btn-more:hover {
   background: var(--color-secundario);
   color: white;
-  box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3); /* Sombra dorada */
+  box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3); 
 }

@@ -11,7 +11,7 @@ import { CommonModule } from '@angular/common';
 export class ContactoComponent {
 
   onSubmit(event: Event) {
-    event.preventDefault(); // Evita que la página recargue
+    event.preventDefault(); 
     alert('Mensaje de prueba enviado. ¡En el futuro esto llegará al correo de la Hacienda!');
   }
 }
